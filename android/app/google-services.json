@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1038461894910",
+    "firebase_url": "https://sisterv4fcm.firebaseio.com",
+    "project_id": "sisterv4fcm",
+    "storage_bucket": "sisterv4fcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038461894910:android:8159ff0804eb8930ae25af",
+        "android_client_info": {
+          "package_name": "com.example.appfratzv40"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038461894910-md4ojvbhtkkrgh460tqat4gi9i7agonm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2WHFT38FAys8RMRxUQ8WJ0t-FAx9vULc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038461894910-md4ojvbhtkkrgh460tqat4gi9i7agonm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
