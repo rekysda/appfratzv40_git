@@ -14,8 +14,6 @@ import 'package:appfratzv40/absensi.dart';
 import 'package:appfratzv40/pelanggaran.dart';
 import 'package:appfratzv40/fcm.dart';
 
-import 'dart:io';
-import 'package:firebase_messaging/firebase_messaging.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -35,7 +33,6 @@ void main() {
       '/InformasiKeuangan': (context) => InformasiKeuangan(),
       '/Absensi': (context) => Absensi(),
       '/Pelanggaran': (context) => Pelanggaran(),
-      '/FCM': (context) => FCM(),
     },
   ));
 }
@@ -55,8 +52,6 @@ class _LoginState extends State<Login> {
   final _key = new GlobalKey<FormState>();
   bool _secureText = true;
 
-  final firebaseMessaging = FirebaseMessaging();
-  String token = '';
 
   showHide() {
     setState(() {
@@ -90,10 +85,6 @@ class _LoginState extends State<Login> {
         _loginStatus = LoginStatus.signIn;
         savePref(value, nisAPI, namaAPI, id, pesan);
       });
-      debugPrint('token: $token');
-        final response = await http.post(
-        "http://sisterv4.frateran.sch.id/sisterv4fratz/api/insertdeviceidsiswa",
-        body: {"nis": username, "deviceid": token});
       print("pesan : $pesan");
     } else {
       print("pesan : $pesan");
@@ -138,9 +129,6 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     // TODO: implement initState
-    firebaseMessaging.getToken().then((token) => setState(() {
-          this.token = token;
-        }));
     super.initState();
     getPref();
   }

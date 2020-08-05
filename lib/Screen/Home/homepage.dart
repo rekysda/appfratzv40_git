@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                 iconBtnAppbar("assets/icons/Home.svg", "Home", 0),
                 iconBtnAppbar("assets/icons/MyAccount.svg", "Profile", 1),
                 iconBtnAppbar("assets/icons/logout.svg", "Logout", 2),
-                iconBtnAppbar("assets/icons/Help.svg", "FCM", 3),
+            //    iconBtnAppbar("assets/icons/Help.svg", "FCM", 3),
               ],
             ),
           ),
@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
         Navigator.pushNamed(context, '/Profil');
       }
       if (index == 2) {
-        Navigator.pushNamed(context, '/Logout');
+        Navigator.pushReplacementNamed(context, '/Logout');
       }
       if (index == 3) {
         Navigator.pushNamed(context, '/FCM');

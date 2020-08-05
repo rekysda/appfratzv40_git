@@ -3,9 +3,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'dart:io';
-import 'package:firebase_messaging/firebase_messaging.dart';
-
 // PROFIL //
 class Profil extends StatefulWidget {
   @override
@@ -14,8 +11,6 @@ class Profil extends StatefulWidget {
 
 class _Profil extends State {
 //  Map data;
-  final firebaseMessaging = FirebaseMessaging();
-  String token = '';
 
   List data;
   String noinduk;
@@ -32,15 +27,11 @@ class _Profil extends State {
 
   @override
   void initState() {
-    firebaseMessaging.getToken().then((token) => setState(() {
-          this.token = token;
-        }));
     this.getData();
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('token: $token');
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Profil"),

@@ -22,7 +22,7 @@ class _Logout extends State {
       preferences.setInt("value", null);
             _loginStatus = LoginStatus.notSignIn;
     });
-            Navigator.pushNamed(context, '/Login');
+            Navigator.pushReplacementNamed(context, '/Login');
   }
 
   @override
